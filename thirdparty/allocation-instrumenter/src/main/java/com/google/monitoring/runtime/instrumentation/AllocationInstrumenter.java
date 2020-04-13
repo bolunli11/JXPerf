@@ -148,8 +148,8 @@ public class AllocationInstrumenter implements ClassFileTransformer {
     AllocationRecorder.addSampler(new Sampler() {
         public void sampleAllocation(int count, String desc, Object newObj, long size) {
             
-            if(size > 1024)
-            {
+            //if(size > 1024)
+            //{
                 try
                 {
                     String res = printAddresses(newObj);
@@ -157,7 +157,7 @@ public class AllocationInstrumenter implements ClassFileTransformer {
                 } catch(Exception e) {
                     return;
                 }
-            }
+            //}
         }
     });
   }
@@ -186,7 +186,7 @@ public class AllocationInstrumenter implements ClassFileTransformer {
 
   public static void premain(String agentArgs, Instrumentation inst) {
 
-	System.load(System.getenv("JXPerf_HOME") + "/build/libagent.so");
+	System.load(System.getenv("OJXPerf_HOME") + "/build/libagent.so");
 
     AllocationRecorder.setInstrumentation(inst);
 
