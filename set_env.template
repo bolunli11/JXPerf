@@ -1,4 +1,4 @@
-export JXPerf_HOME=<your JXPerf home>
+export OJXPerf_HOME=<your OJXPerf home>
 export JAVA_HOME=<your Java home>
 export PATH=$JAVA_HOME/bin:$PATH
-export JAVA_AGENT=$JXPerf_HOME/thirdparty/allocation-instrumenter/target/java-allocation-instrumenter-HEAD-SNAPSHOT.jar
+export JAVA_AGENT=$OJXPerf_HOME/thirdparty/allocation-instrumenter/target/java-allocation-instrumenter-HEAD-SNAPSHOT.jar
